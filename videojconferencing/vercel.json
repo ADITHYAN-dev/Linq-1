@@ -1,13 +1,19 @@
 {
-    "builds": [{
+    "builds": [
+      {
         "src": "videojconferencing/wsgi.py",
         "use": "@vercel/python",
-        "config": {"maxLambdaSize": "15mb", "runtime": "Python 3.12.7"}
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "videojconferencing/wsgi.py"
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "Python 3.12.7"
         }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)", 
+        "dest": "videojconferencing/wsgi.py"
+      }
     ]
-}
+  }
+  
